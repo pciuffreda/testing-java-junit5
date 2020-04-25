@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class IndexControllerTest {
 
@@ -25,8 +26,8 @@ class IndexControllerTest {
 
     @Test
     void oupsHandler() {
-        assertTrue("notimplemented".equals(controller.oupsHandler()), () -> "This is some expensive " +
-                "Message to build" +
+        assertEquals("notimplemented", controller.oupsHandler(), () -> "This is some expensive " +
+                "Message to build " +
                 "for my test");
     }
 }
